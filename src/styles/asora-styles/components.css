@@ -1,0 +1,242 @@
+/*COMPONENTS CSS-
+
+ Reusable UI parts like cards, modals, accordions, alerts, etc.*/
+
+/*MODAL WRAPPER*/
+
+@import url("colours.css");
+@import url("typography.css");
+
+.role_card {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    border: 2px solid #d8d8d842;
+    border-radius: 10px;
+    background: #fff;
+    padding: 2rem;
+    margin: 4vh auto;
+    width: 75%;
+    max-width: 1500px;
+    min-width: 280px;
+    transition: transform .2s, box-shadow .2s, width .3s ease;
+}
+
+.role_card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.10);
+}
+
+.role_card h6 {
+    font-size: 1rem;
+    color: #24272c;
+}
+
+.role_details {
+    align-self: center;
+    text-decoration: underline;
+    color: var(--asora-stormy-sea);
+    font-weight: 500;
+}
+
+.role_aside {
+    width: 25%;
+    border: 1px solid #2c4853;
+    border-radius: 10px;
+    padding: 1rem;
+    float: right;
+    align-items: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+
+}
+
+.role_content {
+    flex: 1;
+    min-width: 240px;
+}
+
+.role_content p {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.role_content h6 {
+    font-size: 1.1rem;
+    color: #24272c;
+    margin-bottom: 0.8rem;
+}
+
+.role_content p {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 0.4rem 0;
+}
+
+.wrapper {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 2em;
+}
+
+
+.wrappera a {
+    color: var(--asora-stormy-sea);
+}
+
+.apply_now_button {
+    font-size: 0.9rem;
+    background-color: var(--asora-onyx-green);
+    border: 2.5px solid var(--asora-onyx-green);
+    padding: 0.6rem 1.8rem;
+    border-radius: 20px;
+    font-weight: 600;
+    color: var(--asora-white);
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.apply_now_button a {
+    color: inherit;
+    text-decoration: none;
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+}
+
+.apply_now_button:hover {
+    background-color: transparent;
+    color: var(--asora-onyx-green);
+}
+
+
+
+/*MODAL BOX*/
+
+.modal {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(77, 77, 77, 0.7);
+    transition: all 0.4s;
+    visibility: hidden;
+    opacity: 1;
+    z-index: 200;
+}
+
+.modal:target {
+    visibility: visible;
+    opacity: 1;
+}
+
+.modalcontent {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    background: #fff;
+    width: 90%;
+    max-width: 700px;
+    max-height: 85vh;
+    padding: 1.5rem;
+    border-radius: 10px;
+    overflow: hidden;
+    font-size: clamp(0.9rem, 1.5vw, 1rem);
+}
+
+.modal-body {
+    overflow-y: auto;
+    flex: 1;
+    margin-bottom: 1rem;
+    padding-right: 0.5rem;
+}
+
+.modal-body p {
+    color: black;
+}
+
+
+.modal-footer {
+    display: flex;
+    justify-content: flex-end;
+}
+
+
+.modalclose {
+    position: absolute;
+    top: 0;
+    right: 15px;
+    color: var(--asora-onyx-green);
+    text-decoration: none;
+    font-size: 36px;
+}
+
+
+.profile-card-content {
+    /* Look of the entire profile cards*/
+    background-color: var(--asora-white);
+    border-radius: 1.5rem;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    transition: transform 0.5s cubic-bezier(0.68, -0.55, 0.27, 1.55), box-shadow 0.3s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 2rem 1.5rem;
+    cursor: pointer;
+    border: 2px solid transparent;
+    overflow: hidden;
+    margin-bottom: 20px;
+
+    position: relative;
+    width: 80%;
+
+}
+
+.profile-card-content:hover {
+    /*Hover transition- Expands/Scales card, add box-shadow & border */
+    transform: scale(1.05);
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+    border-color: rgb(117, 147, 200);
+    z-index: 10;
+}
+
+.expanded-card-content h3,
+th {
+    font-size: 16px;
+}
+
+.expanded-card-content p,
+td {
+    font-size: 14px;
+}
+
+.expanded-card-content {
+    /*Expanded content look- Hidden */
+    /* Height & Opacity set to 0 to hide expanded content + transition*/
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    /* Hides content*/
+    transition: max-height 0.7s ease-in-out, opacity 0.5s ease-in-out;
+    align-self: stretch;
+    text-align: left;
+}
+
+.profile-card-content:hover .expanded-card-content {
+    /* Hover animation for expanded content card*/
+    max-height: 120rem;
+    opacity: 1;
+    padding-top: 1.5rem;
+}

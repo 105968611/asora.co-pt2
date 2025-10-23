@@ -1,0 +1,16 @@
+/*COLOURS CSS-
+
+  Styles for colours*/
+
+/*Applied to ALL html*/
+
+:root {
+/*asora colors*/
+--asora-white: #fff;
+--asora-warm-sand:#dcd4ca;
+--asora-rose-gray:#c2b5b4;
+--asora-dusty-lavander: #948e98;
+--asora-ash-grape: #696772;
+--asora-stormy-sea: #2c4853;
+--asora-onyx-green: #1d2628;
+}

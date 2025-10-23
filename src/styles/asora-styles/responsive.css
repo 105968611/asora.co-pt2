@@ -1,0 +1,330 @@
+/*RESPONSIVE CSS - 
+
+  Media queries and adjustements for different devices or screen sizes*/
+
+
+/*RESPONSIVE DESIGN */
+
+@media (max-width: 780px) {
+
+  .navbar {
+    height: 60px;
+    justify-content: space-between;
+    padding: 0 1rem;
+  }
+
+  .nav_links {
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 1000;
+    width: 300px;
+    height: 100%;
+    background-color: black;
+    transition: right 0.3s ease;
+    box-shadow: -5px 0 5px rgb(150, 150, 150, 0.3);
+    padding-top: 5px;
+  }
+
+  .nav_links a,
+  .nav_links .dropdown {
+    color: white;
+    width: 100%;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  .nav_links a {
+    padding: 20px 30px;
+    border-radius: 0;
+  }
+
+  .nav_links .dropdown .dropdown_title {
+    color: white;
+    width: 100%;
+    padding: 20px 30px;
+    border-radius: 0;
+    display: block;
+  }
+
+  .nav_links a:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: white;
+  }
+
+
+  .dropdown_menu {
+    display: none !important;
+    opacity: 0 !important;
+    pointer-events: none !important;
+  }
+
+
+  .open_sidebar_btn,
+  .close_sidebar_btn {
+    display: block;
+    padding: 20px;
+  }
+
+
+  #sidebar_active:checked~.nav_links {
+    display: flex;
+  }
+
+  .form_container {
+    width: 100%;
+    box-shadow: none;
+    box-sizing: boarder_box;
+    padding: 1rem;
+  }
+
+  .box_input {
+    width: 100%;
+  }
+
+  .body_apply {
+    background-image: none
+  }
+
+  .wide_logo {
+    display: none;
+  }
+
+  .short_logo {
+    display: block;
+    height: 30px;
+  }
+
+  .header_spacer {
+    margin-top: 80px;
+    padding: 0 1rem;
+  }
+
+  .page_title {
+    font-size: 1.5rem;
+  }
+
+  .form_wrapper {
+    padding: 0 0.5rem 2rem 0.5rem;
+  }
+
+  .form_container {
+    box-shadow: none;
+    padding: 1.5rem;
+  }
+
+  .body_apply {
+    background-image: none;
+  }
+
+  .vertical_radio {
+    column-count: 1;
+  }
+
+  .buttons_form {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .submit_btn,
+  .reset_btn {
+    width: 100%;
+    padding: 1rem;
+  }
+
+  .modalcontent {
+    min-width: 90%;
+    height: 90vh;
+    margin-top: 5vh;
+    padding: 1em 2em;
+    border-radius: 10px;
+  }
+
+  .footer-info {
+    padding: 0.5rem;
+  }
+
+  .footer-content {
+    width: 100%;
+  }
+
+  .modalcontent {
+    width: 95%;
+    padding: 1rem;
+    max-height: 90vh;
+  }
+
+  .apply_now_button {
+    width: 100%;
+    text-align: center;
+  }
+
+  .role_card {
+    flex-direction: column;
+    padding: 1.5rem;
+    width: 95%;
+  }
+
+  .role_aside {
+    align-self: center;
+    /* Keep existing mobile behavior but ensure centering */
+    width: 40%;
+    padding: 0.5rem;
+    min-height: 80px;
+    /* Smaller min-height on mobile */
+  }
+
+  .card-footer {
+    justify-content: center;
+  }
+
+  /* Page 1-Banner */
+  .slogan-page1 {
+      font-size: 2rem;
+      width: 50%;
+      bottom: 50px;
+      left: 24%;
+  }
+
+  /* Page 2-Company Mision */
+  .page-2 {
+      height: auto;
+      padding: 50px 20px;
+  }
+
+  .page-2 h2 {
+      font-size: 1.5rem;
+  }
+
+  .description-page2 {
+      width: 90%;
+      font-size: 14px;
+  }
+
+  /* Page 3&6-Banners */
+  .topic-page3,
+  .topic-page6 {
+      font-size: 35px;
+      width: 90%;
+  }
+  
+  .page-3, .page-6 {
+      height: 500px;
+  }
+
+  .careers-button-p3,
+  .careers-button-p6 {
+    transform: scale(0.8);
+  }
+
+  /* Page 4-Why Work with Asora */
+  .page-4 {
+      flex-direction: column;
+      height: auto;
+      padding: 40px 20px;
+  }
+
+  .media-page4 {
+      width: 100%;
+  }
+
+  .title-page4 {
+    font-size: 1.5rem;
+  }
+
+  .descrip-p4 {
+    font-size: 14px;
+  }
+
+  .page4-info {
+      width: 100%;
+      margin: 20px 0 0;
+  }
+
+  .display-img-p4 {
+      width: 100%;
+  }
+  
+  /* Page 5-Life at Asora */
+  .page-5 {
+      height: auto;
+      padding-bottom: 50px;
+  }
+
+  .page-5 h2 {
+      margin: 40px 0 20px 20px;
+      text-align: left;
+      font-size: 1.5rem;
+  }
+
+  .overall-row {
+      flex-direction: column;
+      gap: 30px;
+      padding: 0 20px;
+  }
+
+  .box-p5 {
+      height: 350px;
+      width: 100%;
+  }
+
+
+  /* Footer*/
+
+  .footer-row {
+      width: 100%;
+      flex-direction: column;
+      height: auto;
+      align-items: center;
+  }
+  
+  .footer-column {
+      flex-basis: 100%;
+      width: 100%;
+      padding: 20px 0;
+      text-align: center;
+  }
+  
+  .footer-column ul {
+      text-align: center;
+  }
+  
+  .footer-column a, .footer-column p {
+      padding: 5px;
+  }
+  
+  form {
+      justify-content: center;
+  }
+  
+  .social-media {
+      justify-content: center;
+  }
+  
+  .email-textbox {
+      width: 50%;
+  }
+  
+  .copyright-section {
+      flex-direction: column;
+      text-align: center;
+      transform: scale(.6);
+  }
+  
+  .left-content {
+    margin-bottom: 5em;
+  }
+  .pp-tos-inclusion {
+      margin-top: 5px;
+      margin-bottom: 0;
+  }
+  
+  .profile-card-content {
+    width: 90%;
+  }
+}
+
+
