@@ -1,4 +1,8 @@
-<?php require './includes/header.inc.php';?>
+<?php
+    require_once('./database/settings.php');
+    $db_conn = @mysqli_connect($host,$username,$password,$database);
+    require './includes/header.inc.php';
+?>
 
 
     <!--ABOUT THE TEAM!!!!-->
@@ -49,13 +53,30 @@
               </p>
 
               <h3> Contributions </h3>
-              <p>
-              As the Team Manager, I was responsible for preparing weekly tasks, developing
-              detailed planning documentation and arranging meetings in support of the Team
-              Leader. My contributions also include leading the brand's initial design and
-              wireframing, creating essential company assets like images and logos, and 
-              developing the index.html & about.html file.
-              </p>
+              <?php
+                if ($db_conn){
+                    $query = "SELECT * FROM memberContributions WHERE member = 'Hannah'";
+                    $result = mysqli_query($db_conn, $query);
+                    if ($result){
+                        echo "<table class='contributions-table'>";
+                        echo "<tr>";
+                        echo "<th class='contribution'>Contribution</th>";
+                        echo "<th class='projectpart'>Project Part</th>";
+                        echo "</tr>";
+                        while ($row = mysqli_fetch_assoc($result)){
+                            echo "<tr>";
+                            echo "<td class='contribution'>" . $row['contribution'] . "</td>";
+                            echo "<td class='projectpart'>" . $row['projectpart'] . "</td>";
+                            echo "</tr>";
+                        }
+                        echo "</table>";
+                    } else {
+                        echo "<p>There are no contributions to display.</p>";
+                    }
+                } else {
+                    echo "<p>Unable to connect to the database.</p>";
+                }
+              ?>
 
 
               <table class="fun-fact-table">
@@ -186,11 +207,30 @@
               </p>
 
               <h3> Contributions </h3>
-              <p>
-                Led the development strategy and managed the GitHub repo while collaborating with 
-                teammates to deliver the final product. Contributed to the apply form, jobs page 
-                documentation, resource sharing, and assisted others throughout the project.
-              </p>
+              <?php
+                if ($db_conn){
+                    $query = "SELECT * FROM memberContributions WHERE member = 'Isabela'";
+                    $result = mysqli_query($db_conn, $query);
+                    if ($result){
+                        echo "<table class='contributions-table'>";
+                        echo "<tr>";
+                        echo "<th class='contribution'>Contribution</th>";
+                        echo "<th class='projectpart'>Project Part</th>";
+                        echo "</tr>";
+                        while ($row = mysqli_fetch_assoc($result)){
+                            echo "<tr>";
+                            echo "<td class='contribution'>" . $row['contribution'] . "</td>";
+                            echo "<td class='projectpart'>" . $row['projectpart'] . "</td>";
+                            echo "</tr>";
+                        }
+                        echo "</table>";
+                    } else {
+                        echo "<p>There are no contributions to display.</p>";
+                    }
+                } else {
+                    echo "<p>Unable to connect to the database.</p>";
+                }
+              ?>
 
 
               <table class="fun-fact-table">
@@ -293,9 +333,30 @@
               </p>
 
               <h3> Contributions </h3>
-              <p>
-              I worked on about.html, attended all meetings and made updates to my branch.
-              </p>
+              <?php
+                if ($db_conn){
+                    $query = "SELECT * FROM memberContributions WHERE member = 'Nathan'";
+                    $result = mysqli_query($db_conn, $query);
+                    if ($result){
+                        echo "<table class='contributions-table'>";
+                        echo "<tr>";
+                        echo "<th class='contribution'>Contribution</th>";
+                        echo "<th class='projectpart'>Project Part</th>";
+                        echo "</tr>";
+                        while ($row = mysqli_fetch_assoc($result)){
+                            echo "<tr>";
+                            echo "<td class='contribution'>" . $row['contribution'] . "</td>";
+                            echo "<td class='projectpart'>" . $row['projectpart'] . "</td>";
+                            echo "</tr>";
+                        }
+                        echo "</table>";
+                    } else {
+                        echo "<p>There are no contributions to display.</p>";
+                    }
+                } else {
+                    echo "<p>Unable to connect to the database.</p>";
+                }
+              ?>
 
 
               <table class="fun-fact-table">
@@ -413,9 +474,30 @@
               </p>
 
               <h3> Contributions </h3>
-              <p>
-              I worked on the jobs page and attended meetings along with making updates to my branch.
-              </p>
+              <?php
+                if ($db_conn){
+                    $query = "SELECT * FROM memberContributions WHERE member = 'Joseph'";
+                    $result = mysqli_query($db_conn, $query);
+                    if ($result){
+                        echo "<table class='contributions-table'>";
+                        echo "<tr>";
+                        echo "<th class='contribution'>Contribution</th>";
+                        echo "<th class='projectpart'>Project Part</th>";
+                        echo "</tr>";
+                        while ($row = mysqli_fetch_assoc($result)){
+                            echo "<tr>";
+                            echo "<td class='contribution'>" . $row['contribution'] . "</td>";
+                            echo "<td class='projectpart'>" . $row['projectpart'] . "</td>";
+                            echo "</tr>";
+                        }
+                        echo "</table>";
+                    } else {
+                        echo "<p>There are no contributions to display.</p>";
+                    }
+                } else {
+                    echo "<p>Unable to connect to the database.</p>";
+                }
+              ?>
 
 
               <table class="fun-fact-table">
@@ -490,7 +572,7 @@
 
               <div class="user-meme-choice">
                 <h3>What is your favourite meme?</h3>
-                <img class="user-meme-pic" src="images/profiles/NathanMeme.png" alt="meme-pic">
+                <img class="user-meme-pic" src="images/profiles/JosephMeme.png" alt="meme-pic">
               </div>
           </div>
         
@@ -615,3 +697,4 @@
 
 </body>
 </html>
+<?php mysqli_close($db_conn); ?>
