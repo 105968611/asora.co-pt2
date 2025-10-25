@@ -28,3 +28,18 @@
 .fade-in0-up {
   animation: fadeInUp 1s ease-out;
 }
+
+#success-modal .modalcontent {
+    animation: slideDown 0.4s ease-out;
+}
+
+@keyframes slideDown {
+    from {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}

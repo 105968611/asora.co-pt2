@@ -38,15 +38,21 @@ require './includes/header.inc.php'; ?>
         <div>
           <div class="wrapper">
             <!--Modal toggle using job reference to get details connected to each role-->
-            <a href="#<?= htmlspecialchars($job['job_reference']) ?>" class="role_details" aria-label="Open modal for job details">Job details</a>
-            <a class="apply_now_button" href="apply.php" aria-label="Apply now for the Data Analyst position">Apply Now</a>
+            <a href="#modal-<?= htmlspecialchars($job['job_reference']) ?>" class="role_details" aria-label="Open modal for job details">Job details</a>
+            <a
+              class="apply_now_button"
+              href="apply.php?job_reference=<?= urlencode($job['job_reference']) ?>&job_title=<?= urlencode($job['job_title']) ?>"
+              aria-label="Apply now for the <?= htmlspecialchars($job['job_title']) ?> position">
+              Apply Now
+            </a>
+
           </div>
         </div>
       </div>
     </div>
 
     <!-- Modal for each job post -->
-    <div id="<?= htmlspecialchars($job['job_reference']) ?>" class="modal">
+    <div id="modal-<?= htmlspecialchars($job['job_reference']) ?>" class="modal">
       <div class="modalcontent">
         <div class="modal-body">
           <h2><?= htmlspecialchars($job['job_title']) ?></h2>
@@ -94,7 +100,7 @@ require './includes/header.inc.php'; ?>
               <?php endif; ?>
 
 
-                  
+
               <?php if (!empty($job['job_preferable'])): ?>
                 <h4>Preferable</h4>
                 <ul>
@@ -115,7 +121,13 @@ require './includes/header.inc.php'; ?>
         </div>
 
         <div class="modal-footer">
-          <a class="apply_now_button" href="apply.php">Apply Now</a>
+          <a
+            class="apply_now_button"
+            href="apply.php?job_reference=<?= urlencode($job['job_reference']) ?>&job_title=<?= urlencode($job['job_title']) ?>"
+            aria-label="Apply now for the <?= htmlspecialchars($job['job_title']) ?> position">
+            Apply Now
+          </a>
+
         </div>
 
         <a href="#1234" class="modalclose">&times;</a>

@@ -7,6 +7,50 @@
 @import url("colours.css");
 @import url("typography.css");
 
+
+/*MODAL SUBMITION*/
+.modal-style {
+    background-color: var(--asora-onyx-green);
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin: 0 auto 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+.app-details {
+    background-color: #f8f9fa;
+    padding: 1.5rem;
+    border-radius: 8px;
+    margin: 1.5rem 0;
+    border-left: 4px solid var(--asora-stormy-sea);
+}
+
+
+
+.succ-modal-footer {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    padding: 1rem;
+}
+
+.modalfor {
+    padding: 0.75rem 1.5rem;
+    background-color: #6c757d;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: 500;
+}
+
+
+
 .role_card {
     display: flex;
     flex-wrap: wrap;
