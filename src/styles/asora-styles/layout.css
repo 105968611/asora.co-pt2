@@ -616,6 +616,15 @@ ul {
   margin-top: 2rem;
 }
 
+.contributions-table {
+  width:100%;
+}
+.contribution{
+  width: 80%;
+}
+.projectpart{
+  width: 20%;
+}
 /* Fun fact table and Hobbies Table*/
 
 /*Styling text*/
