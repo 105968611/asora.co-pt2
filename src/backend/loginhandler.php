@@ -12,7 +12,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 }
 
 //prepare function prepares the sql cmd but doesn't run it
-$stmt = $conn->prepare("SELECT * FROM hr_users_insecure WHERE username = ?");
+$stmt = $conn->prepare("SELECT * FROM users WHERE username = ?");
 
 // same thing here, we don't want to expose error details to client-side
 if (!$stmt) {
@@ -45,4 +45,3 @@ if ($user && password_verify($password, $user['password_hash'])) {
 // Close connection
 mysqli_close($conn);
 }
-?>

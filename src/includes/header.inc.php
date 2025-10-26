@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Careers</title>
+  <title><?= htmlspecialchars($page_title ?? 'Default Site Title') ?></title>
   <link rel="shortcut icon" type="x-icon" href="images/logos/asora_logo_white_increasedsize.png">
   <!--Link to CSS-->
 
@@ -21,5 +21,3 @@
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
     rel="stylesheet">
 </head>
-<body>
-<?php require 'navbar.inc.php'; ?>

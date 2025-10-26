@@ -285,3 +285,41 @@ td {
     opacity: 1;
     padding-top: 1.5rem;
 }
+
+
+.filter-bar {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.eoi-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.eoi-table th,
+td {
+    padding: 10px 15px;
+    border-bottom: 1px solid #ddd;
+    text-align: left;
+}
+
+.eoi-table th {
+    background: #0013532a;
+    color: white;
+}
+
+.eoi-table tr:hover {
+    background: #f1f1f1;
+}
+
+.status {
+    font-weight: bold;
+    padding: 4px 8px;
+    border-radius: 4px;
+}
+
