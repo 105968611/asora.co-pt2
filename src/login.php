@@ -3,6 +3,10 @@
 
 <?php require './includes/header.inc.php' ?>
 
+<body>
+
+<?php require('./includes/navbar.inc.php'); ?>
+
 <div class="login-container">
     <div class="login-card">
         <img src="./images/logos/asora_logo_black.png" alt="Logo" style="width: 5rem; margin-bottom: 1em;">

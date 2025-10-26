@@ -1,5 +1,8 @@
 <?php require './includes/header.inc.php'; ?>
 
+<body>
+
+<?php require('./includes/navbar.inc.php'); ?>
 
 	<!--Page 1 First Section, Company Slogan Included-->
 	<section class="page-1">

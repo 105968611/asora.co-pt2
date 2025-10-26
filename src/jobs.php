@@ -8,6 +8,10 @@ $result = $conn->query($sql);
 //general header for all pages 
 require './includes/header.inc.php'; ?>
 
+<body>
+
+<?php require('./includes/navbar.inc.php'); ?>
+
 <main>
 
   <!--JOBS Banner-->

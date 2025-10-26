@@ -4,6 +4,10 @@
     require './includes/header.inc.php';
 ?>
 
+<body>
+
+<?php require('./includes/navbar.inc.php'); ?>
+
 
     <!--ABOUT THE TEAM!!!!-->
     <div>

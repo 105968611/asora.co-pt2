@@ -62,7 +62,9 @@ if (isset($_SESSION['errors'])) {
     unset($_SESSION['errors']);
 }
 ?>
+<body>
 
+<?php require('./includes/navbar.inc.php'); ?>
 <!--Form page header-->
 <div class="header_spacer">
     <div class="pages_path">
