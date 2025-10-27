@@ -2,7 +2,7 @@
 
   Specific stules for inputs, buttons and form layouts*/
 
-  
+
 /*FORM CONTAINER*/
 
 @import url("colours.css");
@@ -155,56 +155,128 @@ textarea.box_input {
 }
 
 .login-container {
-    margin: 0;
-    height: 100vh;
-    /* full viewport height */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: linear-gradient(135deg, #d5e2f0, #6f7779);
+  margin: 0;
+  height: 100vh;
+  /* full viewport height */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #d5e2f0, #6f7779);
 }
 
 .login-card {
-    background: #fff;
-    width: 350px;
-    padding: 2.5em;
-    border-radius: 1rem;
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
-    text-align: center;
+  background: #fff;
+  width: 350px;
+  padding: 2.5em;
+  border-radius: 1rem;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  text-align: center;
 
 
-    /* Animation */
-    opacity: 0;
-    transform: translateY(50px) scale(0.95);
-    animation: fadeInUp 0.8s ease forwards;
+  /* Animation */
+  opacity: 0;
+  transform: translateY(50px) scale(0.95);
+  animation: fadeInUp 0.8s ease forwards;
 }
 
 .input-login {
-    width: 100%;
-    padding: 0.8em;
-    margin: 0.5em 0;
-    border: 1px solid #ccc;
-    border-radius: 0.5em;
-    font-size: 1em;
+  width: 100%;
+  padding: 0.8em;
+  margin: 0.5em 0;
+  border: 1px solid #ccc;
+  border-radius: 0.5em;
+  font-size: 1em;
 }
 
 .button-login {
-    margin-top: 1em;
-    width: 100%;
-    padding: 0.9em;
-    border: none;
-    background: var(--asora-onyx-green);
-    color: white;
-    font-size: 1em;
-    border-radius: 0.5em;
-    cursor: pointer;
-    transition: background 0.3s ease, transform 0.2s ease;
+  margin-top: 1em;
+  width: 100%;
+  padding: 0.9em;
+  border: none;
+  background: var(--asora-onyx-green);
+  color: white;
+  font-size: 1em;
+  border-radius: 0.5em;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
 }
 
 .button-login:hover {
-    background: var(--asora-onyx-green);
-    opacity: 0.9;
-    transform: translateY(-2px);
+  background: var(--asora-onyx-green);
+  opacity: 0.9;
+  transform: translateY(-2px);
 }
 
 
+.user-management-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 2rem;
+  padding: 2rem;
+  max-width: 1400px;
+  margin: 10% auto;
+}
+
+.add-user-section {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  padding: 2rem;
+  height: fit-content;
+
+}
+
+.users-table-section {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  padding: 2rem;
+}
+
+.users-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+}
+
+.users-table th {
+  background-color: #eff4f8;
+  color: #3f4e61;
+  padding: 12px;
+  text-align: left;
+  font-weight: 500;
+  border-bottom: 2px solid #ddd;
+}
+
+.users-table td {
+  padding: 12px;
+  border-bottom: 1px solid #eee;
+}
+
+.users-table tr:hover {
+  background-color: #f9f9f9;
+}
+
+.role-badge {
+  display: inline-block;
+  padding: 4px 12px;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.role-admin {
+  background-color: #e3f2fd;
+  color: #003a74;
+}
+
+.role-user {
+  background-color: #f3e5f5;
+  color: #300044;
+}
+
+@media (max-width: 968px) {
+  .user-management-wrapper {
+    grid-template-columns: 1fr;
+  }
+}

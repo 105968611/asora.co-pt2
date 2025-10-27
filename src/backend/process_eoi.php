@@ -113,16 +113,6 @@ $require = [];
         $require[] = "Please select at least one skill.";
     }
 
-    // URL validations
-    if (!empty($portfolio) && !filter_var($portfolio, FILTER_VALIDATE_URL)) {
-        $require[] = "Portfolio URL is not valid.";
-    }
-    if (!empty($linkedin) && !filter_var($linkedin, FILTER_VALIDATE_URL)) {
-        $require[] = "LinkedIn URL is not valid.";
-    }
-    if (!empty($github) && !filter_var($github, FILTER_VALIDATE_URL)) {
-        $require[] = "GitHub URL is not valid.";
-    }
 
     if (!empty($require)) {
         // Store errors in session or redirect back with error message

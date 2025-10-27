@@ -1,27 +1,30 @@
-<?php require './includes/header.inc.php'; ?>
+<?php
+$page_title = "Home - Asora";
+require './includes/header.inc.php';
+?>
 
 <body>
 
-<?php require('./includes/navbar.inc.php'); ?>
+	<?php require('./includes/navbar.inc.php'); ?>
 
 	<!--Page 1 First Section, Company Slogan Included-->
 	<section class="page-1">
 		<img class="bg1-page1" src="images/background/bg1.jpg" alt="bg1">
-		<h1 class="slogan-page1">
+		<h1 style="font-size: 5em; font-weight: 500; color: white; width: 800px; position: absolute; bottom: 185px; left: 45px;"">
 			Technology that Serves <!--Company Slogan-->
 		</h1>
 	</section>
 
 
 	<!--Page 2, Company Mission and Insight of Company-->
-	<section class="page-2">
-		<h2>Our Mission</h2>
-		<p class="description-page2">
-			At Asora, we are a team of problem-solvers dedicated to improving
-			public services and tackling complex challenges. Every project we work
-			on, from enhancing national security to boosting economic transparency,
-			has a direct and meaningful impact on people's lives.
-		</p>
+	<section class=" page-2">
+			<h2>Our Mission</h2>
+			<p class="description-page2">
+				At Asora, we are a team of problem-solvers dedicated to improving
+				public services and tackling complex challenges. Every project we work
+				on, from enhancing national security to boosting economic transparency,
+				has a direct and meaningful impact on people's lives.
+			</p>
 	</section>
 
 
@@ -39,7 +42,7 @@
 	<!--Page 4, Why work with Asora? Insight of Company Culture-->
 	<section class="page-4">
 		<div class="media-page4">
-			<img class="display-img-p4" src="images/background/bg11.png" alt="Filler-Image">
+			<img class="display-img-p4" src="images/background/bg11.png" alt="image_work_with_us">
 		</div>
 
 		<div class="page4-info">
@@ -115,7 +118,7 @@
 
 
 	<!--Footer Creds/Made by Hannah-->
-<?php require './includes/footer.inc.php'; ?>
+	<?php require './includes/footer.inc.php'; ?>
 
 
 </body>

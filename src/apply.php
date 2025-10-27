@@ -29,7 +29,7 @@ if ($job_reference && !$job_title) {
     $stmt->close();
 }
 
-require './includes/header.inc.php';
+
 
 
 //Store values on session
@@ -61,6 +61,9 @@ if (isset($_SESSION['errors'])) {
     echo '</div>';
     unset($_SESSION['errors']);
 }
+
+$page_title = "Apply - Asora";
+require './includes/header.inc.php';
 ?>
 <body>
 
@@ -74,10 +77,11 @@ if (isset($_SESSION['errors'])) {
     <div class="page_title">
         <h1 style="font-weight: 500;">Apply Now <img width="32" height="32" src="https://img.icons8.com/windows/32/expand-arrow--v1.png"
                 alt="expand-arrow--v1" /> </h1>
-        <h3 style="font-weight: 300;">for 
+                <br>
+        <h2 style="font-weight: 300; font-size:40px">for 
         <span style="background-color:#eff4f8; padding: 0.5rem; border-radius: 10px; color:#3f4e61; font-weight:500;">
             <?= htmlspecialchars($job_title)?> <!--Uses job title and display it on top. Synch with filter an 'apply now' button from jobs card-->
-        </span></h3>
+        </span></h2>
     </div>
 </div>
 
@@ -86,12 +90,14 @@ if (isset($_SESSION['errors'])) {
 
     <form action="./backend/process_eoi.php" method="POST">
         <div class="form_container">
+
             <input type="hidden" name="job_reference" value="<?= htmlspecialchars($job_reference) ?>">
 
             <p>
                 <legend>Your role</legend>
             </p>
-            <select name="job_reference" id="job_reference" class="box_input" onchange="window.location.href='apply.php?job_reference=' + this.value;">
+             <label for="job_reference" class="sr-only">Job Selector</label>
+            <select id="job_reference" name="job_reference" id="job_reference" class="box_input" onchange="window.location.href='apply.php?job_reference=' + this.value;">
                 <option value="">-- Choose your role --</option>
                 <!--Dynamically changes role title in apply form if using filter-->
                 <?php
@@ -212,7 +218,7 @@ if (isset($_SESSION['errors'])) {
             <!--Other skills field-->
             <div class="box_form">
                 <label for="other_skill" class="box_label">Other Skills</label>
-                <textarea id="other_skills" name="other_skill" rows="4" class="box_input"placeholder="Describe your skills"><?= htmlspecialchars($form_data['other_skill'] ?? '') ?></textarea>
+                <textarea id="other_skill" name="other_skill" rows="4" class="box_input"placeholder="Describe your skills"><?= htmlspecialchars($form_data['other_skill'] ?? '') ?></textarea>
 
             </div>
 
@@ -221,7 +227,7 @@ if (isset($_SESSION['errors'])) {
             <!--Attachment section-->
             <div class="box_form">
                 <label for="attachment" class="box_label">Attach your CV</label>
-                <input type="file" id="cv" name="attachment" accept=".pdf,.doc,.docx" class="box_attach">
+                <input type="file" id="attachment" name="attachment" accept=".pdf,.doc,.docx" class="box_attach">
             </div>
 
             <!--Potfolio Section-->

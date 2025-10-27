@@ -178,7 +178,7 @@
 .navbar-management {
   margin: 0;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
   background-color: #081416;
   width: 100%;
@@ -397,8 +397,9 @@ form {
 
 .tooltip {
   position: absolute;
-  background-color: rgb(150, 150, 150);
-  color: white;
+  background-color: rgba(0, 0, 0, 0.95);
+  backdrop-filter: none;
+  color: #f5f5f5;
   padding: 4px 8px 4px 8px;
   padding-top: 4px;
   bottom: -20px;
@@ -417,7 +418,7 @@ form {
 /* Footer- Copyright Section*/
 
 .copyright-section {
-  font-size: 10px;
+  font-size: 12px;
   color: var(--asora-ash-grape);
   display: flex;
   justify-content: space-between;

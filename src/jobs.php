@@ -6,6 +6,7 @@ $sql = "SELECT * FROM jobs ORDER BY created_at DESC";
 $result = $conn->query($sql);
 
 //general header for all pages 
+$page_title = "Careers - Asora";
 require './includes/header.inc.php'; ?>
 
 <body>
@@ -36,15 +37,15 @@ require './includes/header.inc.php'; ?>
         <p><img width="28" height="28" src="https://img.icons8.com/windows/32/place-marker.png" alt="place-marker" /><?= htmlspecialchars($job['job_city']) ?>(<?= htmlspecialchars($job['job_mode']) ?>)</p>
         <p><img width="28" height="28" src="https://img.icons8.com/windows/32/clock--v1.png" alt="clock--v1" /><?= htmlspecialchars($job['job_type']) ?></p>
         <p><img width="28" height="28" src="https://img.icons8.com/windows/32/money.png" alt="money" /><?= htmlspecialchars($job['job_salary']) ?></p>
-        <p><img width="28" height="28" src="https://img.icons8.com/windows/32/manager.png" alt="manager" /><?= htmlspecialchars($job['job_manager']) ?></p>
-        <p><img width="28" height="28" src="https://img.icons8.com/windows/32/collaborating-in-circle.png" alt="department-logo" /><?= htmlspecialchars($job['job_department']) ?></p>
+        <p><img width="28" height="28" src="https://img.icons8.com/windows/32/manager.png" alt="manager/s" />Reports to <?= htmlspecialchars($job['job_manager']) ?></p>
+        <p><img width="28" height="28" src="https://img.icons8.com/windows/32/collaborating-in-circle.png" alt="department-logo" /><?= htmlspecialchars($job['job_department']) ?> department</p>
 
         <div>
           <div class="wrapper">
             <!--Modal toggle using job reference to get details connected to each role-->
             <a href="#modal-<?= htmlspecialchars($job['job_reference']) ?>" class="role_details" aria-label="Open modal for job details">Job details</a>
             <a
-              class="apply_now_button"
+              class="apply_now_button secondary"
               href="apply.php?job_reference=<?= urlencode($job['job_reference']) ?>&job_title=<?= urlencode($job['job_title']) ?>"
               aria-label="Apply now for the <?= htmlspecialchars($job['job_title']) ?> position">
               Apply Now
@@ -126,7 +127,7 @@ require './includes/header.inc.php'; ?>
 
         <div class="modal-footer">
           <a
-            class="apply_now_button"
+            class="apply_now_button primary"
             href="apply.php?job_reference=<?= urlencode($job['job_reference']) ?>&job_title=<?= urlencode($job['job_title']) ?>"
             aria-label="Apply now for the <?= htmlspecialchars($job['job_title']) ?> position">
             Apply Now
@@ -134,7 +135,7 @@ require './includes/header.inc.php'; ?>
 
         </div>
 
-        <a href="#1234" class="modalclose">&times;</a>
+        <a href="#" class="modal-close">&times;</a>
       </div>
     </div>
 

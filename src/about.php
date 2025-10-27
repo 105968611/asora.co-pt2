@@ -1,4 +1,5 @@
 <?php
+    $page_title = "About - Asora";
     require_once('./database/settings.php');
     $db_conn = @mysqli_connect($host,$username,$password,$database);
     require './includes/header.inc.php';

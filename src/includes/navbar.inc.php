@@ -1,8 +1,8 @@
     <header>
         <div class="navbar">
-            <div class="logo_container">
-                <a href="index.php"><img src="./images/logos/asoratext_black.png" alt="asora_logo"
-                        class="wide_logo"></a>
+            <div class="logo_container" aria-label="Home">
+                <img src="./images/logos/asoratext_black.png" alt="asora_logo"
+                    class="wide_logo">
                 <a href="index.php"><img src="./images/logos/asora_logo_black.png" alt="asora_logo_small"
                         class="short_logo"></a>
             </div>

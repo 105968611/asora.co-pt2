@@ -39,24 +39,17 @@ a {
 
 .page-1 {
   position: relative;
-
+ background-color: #000000;
 }
 
 .bg1-page1 {
   width: 100%;
   margin-top: 3rem;
+ 
 }
 
 .slogan-page1 {
-  font-size: 5em;
-  font-weight: 500;
-  color: white;
-  width: 800px;
-
-  position: absolute;
-  /*Placement of Slogan */
-  bottom: 185px;
-  left: 45px;
+  
 }
 
 
@@ -226,18 +219,22 @@ a {
 
 .box-p5 {
   height: 30em;
+  
   width: 30em;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0);
   /*Box shadow */
   cursor: pointer;
   overflow: hidden;
-
+  background-color: rgba(0, 0, 0, 0.95); ;
+  backdrop-filter: none;
   border-radius: 1rem;
   position: relative;
   transition: 0.15s ease;
 }
 
 .box-p5::before {
+  background-color: rgba(0, 0, 0, 0.95); ;
+  backdrop-filter: none;
   content: '';
   /*Invisible element */
   position: absolute;
@@ -250,7 +247,7 @@ a {
   background-size: cover;
   background-position: var(--bg-position, center);
   /* Custom property for bg image*/
-  background-color: rgba(0, 0, 0, 0.1);
+  background-color: rgba(255, 255, 255, 0.1);
   /* Initial opacity tint */
   background-blend-mode: multiply;
   /*Blend mode on image */
@@ -261,13 +258,15 @@ a {
 }
 
 .box-p5:hover::before {
-  background-color: rgba(0, 0, 0, 0.6);
+  background-color: rgb(255, 255, 255);
+  backdrop-filter: none;
   /* Opacity darken transition hover */
   filter: blur(1.5px);
   /* Blurs image on hover */
 }
 
 .box-p5:hover {
+  background-color: rgb(255, 255, 255);
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
   /* Box-shadow hover */
   transform: scale(1.05);
@@ -284,7 +283,6 @@ a {
   transform: translate(-50%, -50%);
   /*Centers text */
   margin: 0;
-
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -617,14 +615,17 @@ ul {
 }
 
 .contributions-table {
-  width:100%;
+  width: 100%;
 }
-.contribution{
+
+.contribution {
   width: 80%;
 }
-.projectpart{
+
+.projectpart {
   width: 20%;
 }
+
 /* Fun fact table and Hobbies Table*/
 
 /*Styling text*/
@@ -777,7 +778,7 @@ ul {
 
 /*MANAGEMENT TABLE*/
 
-.table-eoi-container{
+.table-eoi-container {
   width: 100%;
   display: flex;
   justify-content: center;
@@ -786,7 +787,7 @@ ul {
   margin-bottom: 8rem;
 }
 
-.table-management { 
+.table-management {
   padding: 1.5rem;
   width: 97%;
   border: #a5a5a5, 1px solid;
@@ -801,8 +802,21 @@ ul {
   color: white
 }
 
-.table-management th, .table-management td {
+.table-management th,
+.table-management td {
   padding: 12px 15px;
   font-size: 0.8rem;
   text-align: left;
+}
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+    white-space: nowrap;
 }

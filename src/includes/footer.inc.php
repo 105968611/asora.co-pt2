@@ -3,9 +3,9 @@
 				<div class="footer-column">
 					<a href="index.html"><img class="logo-footer" src="images/logos/asoratext_black.png" alt="asora-logo"></a>
 					<div class="separator"></div>
-					<h4>Email</h4>
+					<h3>Email</h3>
 					<a class="email-id" href="mailto:info@asoraco.com.au">info@asoraco.com.au</a>
-					<h4>Phone</h4>
+					<h3>Phone</h3>
 					<p>1300 000 000</p>			
 				</div>
 
@@ -25,7 +25,8 @@
 					<p class="info-newsletter"> Subscribe to our newsletter for upcoming events!</p>
 					<form class="newsletter-userinput">
 						<img class="email-icon" src="images/icons/email-icon.png" alt="email-icon">
-						<input class="email-textbox" type="text" placeholder="Enter your Email">
+						<label for="email_footer" class="sr-only">Enter your email</label>
+						<input id="email_footer" class="email-textbox" type="text" placeholder="Enter your Email">
 						<div class="social-icons">
 							<img class="submit-button" src="images/icons/submit-icon.svg" alt="submit-button">
 							<div class="tooltip">Submit</div>

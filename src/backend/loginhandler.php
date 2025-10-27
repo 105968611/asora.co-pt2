@@ -1,6 +1,8 @@
 <?php 
 session_start();
-include_once './database/settings.php';
+include_once '../database/settings.php';
+
+//Log in
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $username = $_POST['username'];
@@ -36,12 +38,13 @@ $user = $result->fetch_assoc(); // readable array (associative array)
 // If user found, log them in
 if ($user && password_verify($password, $user['password_hash'])) {
     $_SESSION['username'] = $user['username'];
-    header("Location: ./manage.php");
+    header("Location: ../manage.php");
     exit();
 } else {
-    echo "Incorrect username or password.";
+    header("Location: ../login.php?error=invalid");
 }
 
 // Close connection
+$stmt->close();
 mysqli_close($conn);
 }
